@@ -1,0 +1,5 @@
+train: C:/Users/casam/Documents/06_Coding/Python/MachineLearning/01_roadSignsProject/data/detection/images/train
+val: C:/Users/casam/Documents/06_Coding/Python/MachineLearning/01_roadSignsProject/data/detection/images/val
+
+nc: 1
+names: ['NoLabel']
