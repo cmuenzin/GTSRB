@@ -27,68 +27,56 @@ Dieses Projekt implementiert ein CNN-Modell zur Bildklassifikation mit dem Ziel,
 ```bash
 git clone https://github.com/cmuenzin/GTSRB.git
 cd GTSRB
+```
 
-3. Abhängigkeiten installieren
-bash
-Kopieren
-Bearbeiten
+### 3. Abhängigkeiten installieren
+```bash
 pip install -r requirements.txt
-4. GTSRB-Datensatz herunterladen
-Lade den Datensatz von GTSRB Download-Seite herunter und entpacke ihn in das Projektverzeichnis:
+```
 
-Kopieren
-Bearbeiten
+### 4. GTSRB-Datensatz herunterladen
+Lade den Datensatz von GTSRB Download-Seite herunter und entpacke ihn in das Projektverzeichnis:
+```
 GTSRB/
 └── Final_Training/
     └── Images/
-🏋️‍♂️ Modell trainieren
-bash
-Kopieren
-Bearbeiten
+```
+
+## Anwendung
+
+### 🏋️‍♂️ Modell trainieren
+```
 python train_model.py
+```
 Optional: Hyperparameter und Pfade können direkt im Skript angepasst werden.
 
-📈 Modell bewerten
+### 📈 Modell bewerten
 Während des Trainings werden Metriken wie Genauigkeit und Verlust ausgegeben. Zusätzlich können Validierungsdaten verwendet werden, um das Modellverhalten zu überwachen.
 
-🔮 Einzelbild-Vorhersage
-bash
-Kopieren
-Bearbeiten
+### 🔮 Einzelbild-Vorhersage
+```
 python predict.py path_to_image.jpg
+```
 Das Skript gibt die erkannte Verkehrsschild-Klasse und den zugehörigen Labelnamen aus.
 
-🧠 Modellarchitektur
+
+## Evaluation
+
+### 🧠 Modellarchitektur
 Das CNN besteht aus mehreren Schichten:
-
 Conv2D → ReLU → MaxPooling
-
 Dropout zur Regularisierung
-
 Dense-Schichten mit Softmax-Ausgabe für Klassifikation in 43 Klassen
 
-📊 Ergebnisse
+### 📊 Ergebnisse
 Das Modell erreicht auf dem GTSRB-Datensatz eine Genauigkeit von über 95 % (je nach Hyperparameterwahl und Datenaugmentierung).
 
-✅ ToDo / Weiterentwicklung
+### ✅ ToDo / Weiterentwicklung
  Integration von Datenaugmentation
-
  Export als .onnx oder .tflite für Edge Deployment
-
  Live-Feed-Integration mit Webcam / Dashcam
-
  Optimierung der Trainingsdauer durch Transfer Learning
 
-🤝 Mitwirken
-Pull Requests und Feature-Vorschläge sind willkommen. Bitte stelle sicher, dass du sauberen, dokumentierten Code einreichst und dich an bestehende Projektstandards hältst.
-
-📄 Lizenz
-Dieses Projekt steht unter der MIT License. Weitere Informationen siehe LICENSE.
-
-📚 Quellen
+### 📚 Quellen
 GTSRB Dataset: https://benchmark.ini.rub.de/
-
-TensorFlow/Keras Dokumentation
-
-Paper: The German Traffic Sign Recognition Benchmark: A multi-class classification competition (Stallkamp et al., 2012)
 
